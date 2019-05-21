@@ -1,11 +1,11 @@
-//client-entry.js
-import { createApp } from './main.js';
+// client-entry.js
+import createApp from './main';
 
-const { app, router } = createApp()
+const { app, router } = createApp();
 
 // this assumes App.vue template root element has `id="app"`
-app.$mount('#app')
+app.$mount('#app');
 
-export function createClient(){
-    return {app, router}
+export default function createClient() {
+  return { app, router };
 }

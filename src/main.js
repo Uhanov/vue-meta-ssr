@@ -1,11 +1,11 @@
 // main.js
-import Vue from 'vue'
-import App from './App.vue'
-import { createRouter } from './router/router.js'
+import Vue from 'vue';
+import App from './App.vue';
+import createRouter from './router/router';
 
 // export a factory function for creating fresh app, router and store
 // instances
-export function createApp() {
+export default function createApp() {
   // create router instance
   const router = createRouter();
 
@@ -15,5 +15,5 @@ export function createApp() {
     render: h => h(App)
   });
 
-  return { app, router};
+  return { app, router };
 }
